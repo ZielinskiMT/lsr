@@ -60,11 +60,11 @@ int main(int argc, char** argv) {
         root /= argv[argPath];
     }
     if(!fs::exists(root)){
-        cout << "! "<< root.string() << " does not exist!\nUsage: lsr <path to a directory>\n";
+        cout << "! "<< root.string() << " does not exist!\nUsage: lsr [-t <max nr of threads to use>] <path to a directory>\n";
         return -1;
     }
     if(!fs::is_directory(root) ){
-        cout << "! "<< root.string() << " is not a directory !\nUsage: lsr <path to a directory>\n";
+        cout << "! "<< root.string() << " is not a directory !\nUsage: lsr [-t <max nr of threads to use>] <path to a directory>\n";
         return -1;
     }
 
